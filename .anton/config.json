@@ -8,7 +8,7 @@
     "servers": {
         "13371337": {
             "host": "195.201.38.163",
-            "domain": "todo.jmartz.de",
+            "domain": "shop.jmartz.de",
             "user": "root",
             "folder": "/var/www"
         }
