@@ -69,4 +69,10 @@ header > .container {
 #vue-page {
   min-height: 85vh;
 }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 </style>
