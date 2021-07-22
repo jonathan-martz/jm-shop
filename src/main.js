@@ -24,7 +24,7 @@ import VueMatomo from 'vue-matomo'
 
 Vue.use(VueMatomo, {
   // Configure your matomo server and site by providing
-  host: 'https://shop.jmartz.de',
+  host: 'https://matomo.jmartz.de',
   siteId: 8,
 
   // Changes the default .js and .php endpoint's filename
