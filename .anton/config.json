@@ -7,8 +7,8 @@
     },
     "servers": {
         "13371337": {
-            "host": "195.201.38.163",
-            "domain": "shop.jmartz.de",
+            "host": "94.130.72.206",
+            "domain": "movie.jetzt",
             "user": "root",
             "folder": "/var/www"
         }
