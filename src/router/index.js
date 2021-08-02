@@ -3,7 +3,10 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import ProductView from '@/views/ProductView.vue'
 import Impressum from '@/views/Impressum.vue'
-import Checkout from '@/views/Checkout.vue'
+import CheckoutCart from '@/views/Checkout/Cart.vue'
+import CheckoutPayment from '@/views/Checkout/Payment.vue'
+import CheckoutShipping from '@/views/Checkout/Shipping.vue'
+import CheckoutReview from '@/views/Checkout/Review.vue'
 
 Vue.use(VueRouter)
 
@@ -24,9 +27,24 @@ const routes = [
     component: Impressum
   },
   {
-    path: '/checkout/',
-    name: 'Checkout',
-    component: Checkout
+    path: '/checkout/cart',
+    name: 'CheckoutCart',
+    component: CheckoutCart
+  },
+  {
+    path: '/checkout/payment',
+    name: 'CheckoutPayment',
+    component: CheckoutPayment
+  },
+  {
+    path: '/checkout/shipping',
+    name: 'CheckoutShipping',
+    component: CheckoutShipping
+  },
+  {
+    path: '/checkout/review',
+    name: 'CheckoutReview',
+    component: CheckoutReview
   }
 ]
 

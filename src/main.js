@@ -4,7 +4,7 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret,faTimes, faPlus,faStar } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret,faTimes, faPlus,faStar,faBars,faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { faStar as fabStar } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -12,6 +12,8 @@ Vue.config.productionTip = false
 
 library.add(fabStar)
 library.add(faStar)
+library.add(faShoppingCart)
+library.add(faBars)
 library.add(faPlus)
 library.add(faUserSecret)
 library.add(faTimes)

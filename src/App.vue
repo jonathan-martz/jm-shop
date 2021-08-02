@@ -3,8 +3,11 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 pb-2 pt-2">
             <Header></Header>
+          </div>
+          <div class="col-12">
+            <Nav-Content></Nav-Content>
           </div>
         </div>
       </div>
@@ -31,6 +34,7 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import NavContent from "@/components/NavContent.vue";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -39,13 +43,16 @@ export default {
   components: {
     Header,
     Footer,
+    NavContent,
   },
   watch: {
     $vssWidth: function (to) {
       this.$store.commit("screen-change", to);
+      this.$store.commit("nav-close");
     },
     $route: function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
+      this.$store.commit("nav-close");
     },
   },
   mounted() {

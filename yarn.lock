@@ -988,6 +988,77 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@paypal/checkout-components@^5.0.172":
+  version "5.0.172"
+  resolved "https://registry.yarnpkg.com/@paypal/checkout-components/-/checkout-components-5.0.172.tgz#1cf898ba9a11aea9d3c22848cec6a2c716ded121"
+  integrity sha512-K0IoliblQ0RJPr5/Glu6iDkkG9CtTdNQn1Z5pIMQ6brvkktkCwo+jTwXcYkU6V1ZYnojetKdby8FOZCN5bDhKw==
+  dependencies:
+    "@paypal/common-components" "^1.0.16"
+    "@paypal/funding-components" "^1.0.17"
+    "@paypal/sdk-client" "^4.0.156"
+    "@paypal/sdk-constants" "^1.0.107"
+    "@paypal/sdk-logos" "^1.0.26"
+    belter "^1.0.2"
+    cross-domain-utils "^2.0.1"
+    jsx-pragmatic "^2"
+    post-robot "^10.0.0"
+    zalgo-promise "^1.0.10"
+    zoid "^9.0.0"
+
+"@paypal/common-components@^1.0.16":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@paypal/common-components/-/common-components-1.0.20.tgz#b4b5b9aea950aeaae92ae0c44888aca9eafe20bf"
+  integrity sha512-pimzVBdsgtfuZxiNG/E4fGQd9IE4mLYtaV4zdhWrimb4l4DuABvIOIkvTOmRSrprGm72P0SlqEPCtRj7BPodzg==
+  dependencies:
+    "@paypal/sdk-client" "^4.0.0"
+    "@paypal/sdk-constants" "^1.0.1"
+    "@paypal/sdk-logos" "^1.0.1"
+    belter "^1.0.2"
+    jsx-pragmatic "^2"
+    post-robot "^10.0.0"
+    zalgo-promise "^1.0.10"
+    zoid "^9.0.0"
+
+"@paypal/funding-components@^1.0.17":
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/@paypal/funding-components/-/funding-components-1.0.22.tgz#a2fb7d948144074d2f07cfda9c0fb50d0ca22528"
+  integrity sha512-kddCq2vds14+OhQa8oMShCCz91wNTIsOW/rfHz1oHHsG06KRkAoKwCzNSwbwWK76YPe3kWJZMg+BaDwQJ9zYVQ==
+  dependencies:
+    "@paypal/sdk-client" "^4.0.122"
+    "@paypal/sdk-constants" "^1.0.57"
+    belter "^1.0.16"
+    cross-domain-utils "^2.0.27"
+
+"@paypal/sdk-client@^4.0.0", "@paypal/sdk-client@^4.0.122", "@paypal/sdk-client@^4.0.156":
+  version "4.0.158"
+  resolved "https://registry.yarnpkg.com/@paypal/sdk-client/-/sdk-client-4.0.158.tgz#a4160a69de817062203fff9152a752f35a9a7088"
+  integrity sha512-owP2r1Cs6kpuXSh+Fzz0BsKAlFwzbKWhuqzZZ+HNkE2j27GhB1I9XDMQlU56Bo8C+3An9/qGNgtFipaG2HH8ww==
+  dependencies:
+    "@paypal/sdk-constants" "^1.0.94"
+    beaver-logger "^4.0.0"
+    belter "^1.0.146"
+    bowser "^2.0.0"
+    jsx-pragmatic "^2"
+    zalgo-promise "^1.0.46"
+
+"@paypal/sdk-constants@^1.0.1", "@paypal/sdk-constants@^1.0.107", "@paypal/sdk-constants@^1.0.11", "@paypal/sdk-constants@^1.0.57", "@paypal/sdk-constants@^1.0.64", "@paypal/sdk-constants@^1.0.94":
+  version "1.0.107"
+  resolved "https://registry.yarnpkg.com/@paypal/sdk-constants/-/sdk-constants-1.0.107.tgz#d204330aba1aedc86f917672326e52901479bd2e"
+  integrity sha512-b/F6zz9hwZ4//XjH8uKQksPQY5m9VQ0Zgi+5J6Zb2ys5LzQu9w1VxH++jdChUNEcYa2Nm3u4QwaJCGSyBsSprA==
+  dependencies:
+    cross-domain-utils "^2.0.10"
+    hi-base32 "^0.5.0"
+    zalgo-promise "^1.0.28"
+
+"@paypal/sdk-logos@^1.0.1", "@paypal/sdk-logos@^1.0.26":
+  version "1.0.37"
+  resolved "https://registry.yarnpkg.com/@paypal/sdk-logos/-/sdk-logos-1.0.37.tgz#4afddc1a618423ca4f484e69f3b6ef279ef01bfa"
+  integrity sha512-7a5Go6NlpIBJr856+/odXEmu8ihejExh8fW7MwoKia9PIv2Gh6E/vQalAgLrJW5unJdroClXMCvzOqZxdC700g==
+  dependencies:
+    "@paypal/sdk-constants" "^1.0.11"
+    belter "^1.0.45"
+    jsx-pragmatic "^2"
+
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@soda/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.8.0.tgz#84751d82a93019d5c92c0cf0e45ac59087cd2240"
@@ -1597,6 +1668,11 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+Base64@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/Base64/-/Base64-1.1.0.tgz#810ef21afa8357df92ad7b5389188c446b9cb956"
+  integrity sha512-qeacf8dvGpf+XAT27ESHMh7z84uRzj/ua2pQdJg483m3bEXv/kVFtDnMgvf70BQGqzbZhR9t6BmASzKvqfJf3Q==
+
 accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
@@ -1997,6 +2073,30 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+beaver-logger@^3.0.17, beaver-logger@^3.0.6:
+  version "3.0.19"
+  resolved "https://registry.yarnpkg.com/beaver-logger/-/beaver-logger-3.0.19.tgz#1d9d95ec67acb62c70cde0a284395a6e07e6ca79"
+  integrity sha512-hfBwPUD8PeE6mFSTtWAYd/wI8AzaoeRGNIpWGZWJGZBLyl7Fb7n6PL33JujUzWKWDsIi9V3HoppqIyM/CeeSnw==
+  dependencies:
+    zalgo-promise "^1.0.26"
+
+beaver-logger@^4.0.0:
+  version "4.0.28"
+  resolved "https://registry.yarnpkg.com/beaver-logger/-/beaver-logger-4.0.28.tgz#877a45a6e77f94f4e64f1bb94692bfa0fb45571a"
+  integrity sha512-I/IRoQtz8sxvyu1eACnE4fQH6i+GrQ9HPynrQgBX+jOcEu/BX6Uw9XW9a53WJDo8n5qizH+vlLtZ00ypK0XmpQ==
+  dependencies:
+    belter "^1.0.17"
+    zalgo-promise "^1.0.26"
+
+belter@^1.0.123, belter@^1.0.146, belter@^1.0.16, belter@^1.0.17, belter@^1.0.2, belter@^1.0.41, belter@^1.0.45, belter@^1.0.77, belter@^1.0.96:
+  version "1.0.173"
+  resolved "https://registry.yarnpkg.com/belter/-/belter-1.0.173.tgz#e923490adcd21a9435ae8f683acbc9492113973f"
+  integrity sha512-wmUVEQR0igzKKO1yHT6ouGLCwzoeXFf1OsHeAk8DcCOgYtdBU8NiUlV94qx8NLFnahuwbpDqLBETfHUGXQOL8Q==
+  dependencies:
+    cross-domain-safe-weakmap "^1"
+    cross-domain-utils "^2"
+    zalgo-promise "^1"
+
 bfj@^6.1.1:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/bfj/-/bfj-6.1.2.tgz#325c861a822bcb358a41c78a33b8e6e2086dde7f"
@@ -2086,6 +2186,16 @@ bootstrap@^4.5.3:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7"
   integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
+
+bowser@^1.7.1:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/bowser/-/bowser-1.9.4.tgz#890c58a2813a9d3243704334fa81b96a5c150c9a"
+  integrity sha512-9IdMmj2KjigRq6oWhmwv1W36pDuA4STQZ8q6YO9um+x07xgYNCD3Oou+WP/3L1HNz7iqythGet3/p4wvc8AAwQ==
+
+bowser@^2.0.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/bowser/-/bowser-2.11.0.tgz#5ca3c35757a7aa5771500c70a73a9f91ef420a8f"
+  integrity sha512-AlcaJBi/pqqJBIQ8U9Mcpc9i8Aqxn88Skv5d+xBX006BY5u8N3mGLHa5Lgppa7L/HfwgwLgZ6NYs+Ag6uUmJRA==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -2840,6 +2950,20 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+cross-domain-safe-weakmap@^1, cross-domain-safe-weakmap@^1.0.1, cross-domain-safe-weakmap@^1.0.22:
+  version "1.0.29"
+  resolved "https://registry.yarnpkg.com/cross-domain-safe-weakmap/-/cross-domain-safe-weakmap-1.0.29.tgz#0847975c27d9e1cc840f24c1745311958df98022"
+  integrity sha512-VLoUgf2SXnf3+na8NfeUFV59TRZkIJqCIATaMdbhccgtnTlSnHXkyTRwokngEGYdQXx8JbHT9GDYitgR2sdjuA==
+  dependencies:
+    cross-domain-utils "^2.0.0"
+
+cross-domain-utils@^2, cross-domain-utils@^2.0.0, cross-domain-utils@^2.0.1, cross-domain-utils@^2.0.10, cross-domain-utils@^2.0.16, cross-domain-utils@^2.0.27, cross-domain-utils@^2.0.33:
+  version "2.0.35"
+  resolved "https://registry.yarnpkg.com/cross-domain-utils/-/cross-domain-utils-2.0.35.tgz#c82f678dfa404dbe87a9bccbaf3a6a00ad624b73"
+  integrity sha512-UYrm3t5GB8ATFSqYeikR1yqY6vEFvPU0slvGW6PLkW2yzVAg13/tytww7ylu6C9J8aZCpEho4WgxhV3uZeEw0g==
+  dependencies:
+    zalgo-promise "^1.0.11"
 
 cross-spawn@^5.0.1:
   version "5.1.0"
@@ -4015,6 +4139,11 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
+form-serialize@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/form-serialize/-/form-serialize-0.7.2.tgz#b0a2ff0c22026fb6d3d15c9d33f6de6a432e4732"
+  integrity sha1-sKL/DCICb7bT0VydM/beakMuRzI=
+
 forwarded@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.2.0.tgz#2269936428aad4c15c7ebe9779a84bf0b2a81811"
@@ -4357,6 +4486,11 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
+
+hi-base32@^0.5.0:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/hi-base32/-/hi-base32-0.5.1.tgz#1279f2ddae2673219ea5870c2121d2a33132857e"
+  integrity sha512-EmBBpvdYh/4XxsnUybsPag6VikPYnN30td+vQk+GI3qpahVEG9+gTkG0aXVxTjBqQ5T6ijbWIu77O+C5WFWsnA==
 
 highlight.js@^10.7.1:
   version "10.7.3"
@@ -5181,6 +5315,11 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.2.3"
     verror "1.10.0"
+
+jsx-pragmatic@^2:
+  version "2.0.20"
+  resolved "https://registry.yarnpkg.com/jsx-pragmatic/-/jsx-pragmatic-2.0.20.tgz#e0c10d89d49ed528f3012de32ae0b5a0e3e0054b"
+  integrity sha512-PH+QE1beWIB9CfYBbmwGCo54Ys7SeSKVe4RrAkbBHXy3dL2CYUqbE7A6OOPOH5oWdY9iabzHoEKElfYMu2iMEA==
 
 killable@^1.0.1:
   version "1.0.1"
@@ -6262,6 +6401,23 @@ path-type@^3.0.0:
   dependencies:
     pify "^3.0.0"
 
+paypal-checkout@^4.0.228:
+  version "4.0.328"
+  resolved "https://registry.yarnpkg.com/paypal-checkout/-/paypal-checkout-4.0.328.tgz#aaffdc10652f6c6d6785bb8a4babbf82d1381d02"
+  integrity sha512-IZ76b2CjBuAitY2apEBHzeWSGOO8FVUeCdeRivyZN2uiSVwRZKP5MNpsy74XysXNb/pRNBjd4mJbKw76/pNrpA==
+  dependencies:
+    "@paypal/sdk-constants" "^1.0.64"
+    Base64 "^1.0.0"
+    beaver-logger "^3.0.6"
+    belter "^1.0.96"
+    bowser "^1.7.1"
+    cross-domain-utils "^2.0.1"
+    form-serialize "^0.7.2"
+    hi-base32 "^0.5.0"
+    post-robot "^8.0.0"
+    zalgo-promise "^1.0.10"
+    zoid "^6.0.67"
+
 pbkdf2@^3.0.3:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.1.2.tgz#dd822aa0887580e52f1a039dc3eda108efae3075"
@@ -6351,6 +6507,26 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
+
+post-robot@^10, post-robot@^10.0.0:
+  version "10.0.44"
+  resolved "https://registry.yarnpkg.com/post-robot/-/post-robot-10.0.44.tgz#98cf63be8a3cf39e73001c69f78f8b74a7f97d8f"
+  integrity sha512-LbA2E7gw/MkntjFtT2EPUrapIPCN/M9orKT3OTQC9A87raT5nmsL0nsHAr1AMZS0UoZxB6Z4K6OlnTxAgxXidw==
+  dependencies:
+    belter "^1.0.41"
+    cross-domain-safe-weakmap "^1.0.1"
+    cross-domain-utils "^2.0.0"
+    universal-serialize "^1.0.4"
+    zalgo-promise "^1.0.3"
+
+post-robot@^8.0.0, post-robot@^8.0.29:
+  version "8.0.31"
+  resolved "https://registry.yarnpkg.com/post-robot/-/post-robot-8.0.31.tgz#0b5592b695d9252b86105b50b33d4469447349d5"
+  integrity sha512-nUhtKgtmcgyuPm4RnIhUB3gsDYJBHOgFry3TvOxhIHpgfwYY/T69d4oB90tw4YUllFZUUwqLEv1Wgyg6eOoJ7A==
+  dependencies:
+    cross-domain-safe-weakmap "^1.0.1"
+    cross-domain-utils "^2.0.0"
+    zalgo-promise "^1.0.3"
 
 postcss-calc@^7.0.1:
   version "7.0.5"
@@ -8134,6 +8310,11 @@ unique-slug@^2.0.0:
   dependencies:
     imurmurhash "^0.1.4"
 
+universal-serialize@^1.0.4:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/universal-serialize/-/universal-serialize-1.0.10.tgz#3279bb30f47290ea479f45135620f98fa9d3f3a6"
+  integrity sha512-FdouA4xSFa0fudk1+z5vLWtxZCoC0Q9lKYV3uUdFl7DttNfolmiw2ASr5ddY+/Yz6Isr68u3IqC9XMSwMP+Pow==
+
 universalify@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
@@ -8351,6 +8532,15 @@ vue-matomo@^4.1.0:
   resolved "https://registry.yarnpkg.com/vue-matomo/-/vue-matomo-4.1.0.tgz#17b513bc8ac60e168bfa8190ad05b3257a3c441e"
   integrity sha512-y+tdmhY835Ip3EAGfIAgA33+aBYrvRT7fNnBnA7bSM459XpoWXgqJKdbopVpEUrxCPIq8IkuF7g4KqSLc0Fa3w==
 
+vue-paypal-checkout@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vue-paypal-checkout/-/vue-paypal-checkout-3.2.0.tgz#c5a2ac0fd295dcbf99b3a3c44b870c9e4859a96e"
+  integrity sha512-y7Fz60ePTr6rMHGVu5S+6kDZTl5x3+Wh2DV0E4V1ibc3z4YJ8gw18PxMOt34FexYs5621F5C/9MF30TiSoDXBg==
+  dependencies:
+    babel-runtime "^6.26.0"
+    paypal-checkout "^4.0.228"
+    vue "^2.5.17"
+
 vue-router@^3.2.0:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.2.tgz#5f55e3f251970e36c3e8d88a7cd2d67a350ade5c"
@@ -8382,7 +8572,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.11:
+vue@^2.5.17, vue@^2.6.11:
   version "2.6.14"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
   integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==
@@ -8871,3 +9061,31 @@ yorkie@^2.0.0:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
+
+zalgo-promise@^1, zalgo-promise@^1.0.10, zalgo-promise@^1.0.11, zalgo-promise@^1.0.26, zalgo-promise@^1.0.28, zalgo-promise@^1.0.3, zalgo-promise@^1.0.34, zalgo-promise@^1.0.45, zalgo-promise@^1.0.46:
+  version "1.0.47"
+  resolved "https://registry.yarnpkg.com/zalgo-promise/-/zalgo-promise-1.0.47.tgz#cda98035cc97f053a1ab799277102ccb54897013"
+  integrity sha512-n6d/Gdv3Fl8l7h062WpWjpNYdDh5OFAg/e3UUqxdjbdUi4qdFcfYLJvaPIMrofmrgU7vEJ8ApLdg+yUeYCA9WQ==
+
+zoid@^6.0.67:
+  version "6.0.80"
+  resolved "https://registry.yarnpkg.com/zoid/-/zoid-6.0.80.tgz#d0174ceb230bb912ce213b2951d48ed80f5a8575"
+  integrity sha512-6hulO+7+lwnfFbC7XbJwzSIyp2tP2gteHpmdQeDjMtsx/cI1YzrhZQ5ZGl0VEofv/jQB9RZh/+gf8S3wC5U7ow==
+  dependencies:
+    beaver-logger "^3.0.17"
+    belter "^1.0.77"
+    cross-domain-safe-weakmap "^1.0.22"
+    cross-domain-utils "^2.0.16"
+    hi-base32 "^0.5.0"
+    post-robot "^8.0.29"
+    zalgo-promise "^1.0.34"
+
+zoid@^9.0.0:
+  version "9.0.71"
+  resolved "https://registry.yarnpkg.com/zoid/-/zoid-9.0.71.tgz#64ea5fb0c1cf6722172e88c54d78c35294b0cc01"
+  integrity sha512-wohgtumZ/5v8wSu92Dms6Er3JMhd6xF/9EXPFU0yLNJqQfzQ9GaiL/8OLrtD/+XTYzCcCqUUlrE27PKqbi1O5w==
+  dependencies:
+    belter "^1.0.123"
+    cross-domain-utils "^2.0.33"
+    post-robot "^10"
+    zalgo-promise "^1.0.45"
