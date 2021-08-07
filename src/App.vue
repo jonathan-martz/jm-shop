@@ -9,6 +9,9 @@
           <div class="col-12">
             <Nav-Content></Nav-Content>
           </div>
+          <div class="col-12">
+            <Messages></Messages>
+          </div>
         </div>
       </div>
     </header>
@@ -35,6 +38,7 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import NavContent from "@/components/NavContent.vue";
+import Messages from "@/components/Messages.vue";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -44,6 +48,7 @@ export default {
     Header,
     Footer,
     NavContent,
+    Messages,
   },
   watch: {
     $vssWidth: function (to) {
@@ -57,6 +62,9 @@ export default {
   },
   mounted() {
     this.$store.commit("screen-change", window.innerWidth);
+    this.$store.commit("user-reload", {
+      that: this,
+    });
   },
 };
 </script>
