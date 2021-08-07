@@ -7,6 +7,7 @@ import CheckoutCart from '@/views/Checkout/Cart.vue'
 import CheckoutPayment from '@/views/Checkout/Payment.vue'
 import CheckoutShipping from '@/views/Checkout/Shipping.vue'
 import CheckoutReview from '@/views/Checkout/Review.vue'
+import UserLogin from '@/views/User/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -45,6 +46,11 @@ const routes = [
     path: '/checkout/review',
     name: 'CheckoutReview',
     component: CheckoutReview
+  },
+  {
+    path: '/user/login',
+    name: 'UserLogin',
+    component: UserLogin
   }
 ]
 
