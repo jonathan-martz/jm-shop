@@ -8,8 +8,13 @@
           }}</router-link>
         </div>
         <div class="col-6 col-md-3">
-          <router-link to="/checkout/cart" class="btn btn-primary ml-2">
+          <router-link to="/checkout/cart/" class="btn btn-primary ml-2 btn-block">
             <fontawesomeicon icon="shopping-cart" />
+          </router-link>
+        </div>
+        <div class="col-6 col-md-3">
+          <router-link to="/user/login/" class="btn btn-primary ml-2 btn-block">
+            <fontawesomeicon icon="user" />
           </router-link>
         </div>
       </div>
