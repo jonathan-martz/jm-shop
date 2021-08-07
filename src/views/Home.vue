@@ -2,12 +2,15 @@
   <div class="vp-homepage">
     <div class="container mt-2 mb-3">
       <div class="row">
+        <div class="col-12">
+          <h5>Products</h5>
+        </div>
         <div
-          v-for="(item, index) in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+          v-for="(item, index) in productItems"
           class="col-12 col-md-4 col-lg-3"
           :key="index"
         >
-          <product-card identifier="1" />
+          <product-card :identifier="item.id" />
         </div>
       </div>
     </div>
@@ -20,7 +23,28 @@ import ProductCard from "@/components/Product/Card.vue";
 export default {
   name: "Homepage",
   data() {
-    return {};
+    return {
+      productItems: [],
+    };
+  },
+  mounted() {
+    this.load();
+  },
+  methods: {
+    load: function () {
+      fetch("https://ms.movie.jetzt/products/newest/", {
+        method: "GET",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.products) {
+            this.productItems = data.products;
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    },
   },
   components: {
     "product-card": ProductCard,
