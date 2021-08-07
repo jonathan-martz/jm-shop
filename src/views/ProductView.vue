@@ -49,20 +49,24 @@
           </div>
         </div>
         <div class="col-12 col-md-4 mt-2">
-          <h1 class="h5">Test</h1>
-          <h6>SKU: fast-and-fouries-8</h6>
+          <h1 class="h5">{{ item.name }}</h1>
+          <h6>SKU: {{ item.sku }}</h6>
           <p class="short-desc">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            {{ item.desc }}
           </p>
           <span class="price">9,99€</span>
-          <div class="qty">
-            <input type="number" placeholder="Menge" value="1" />
+          <p class="stock">
+            Stock:
+            <span v-if="stock.qty > 0">Available</span>
+            <span v-else>not Available</span>
+          </p>
+          <div v-if="stock.qty > 0" class="qty">
+            <input type="number" placeholder="Menge" value="1" :max="stock.qty" />
           </div>
           <div class="btn-group mt-2">
-            <a href="" class="add-to-cart btn btn-primary">Add to Cart</a>
+            <a href="" v-if="stock.qty > 0" class="add-to-cart btn btn-primary"
+              >Add to Cart</a
+            >
             <a href="" class="add-to-wishlist btn btn-secondary">Add to Wishlist</a>
           </div>
         </div>
@@ -77,7 +81,48 @@ import Rating from "@/components/Rating.vue";
 export default {
   name: "ProductView",
   data() {
-    return {};
+    return {
+      item: {},
+      stock: {},
+    };
+  },
+  mounted() {
+    this.load();
+  },
+  methods: {
+    load: function () {
+      if (this.$route.params.sku) {
+        fetch("https://ms.movie.jetzt/product/sku/" + this.$route.params.sku, {
+          method: "GET",
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.product) {
+              this.item = data.product;
+              this.loadStock(data.product.stock_id);
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      } else {
+        this.$router.push("/");
+      }
+    },
+    loadStock: function (id) {
+      fetch("https://ms.movie.jetzt/stock/" + id, {
+        method: "GET",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.stock) {
+            this.stock = data.stock;
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    },
   },
   components: {
     rating: Rating,
