@@ -12,8 +12,12 @@
     </div>
     <div class="col-12">
       <select class="form-control">
-        <option>PayPal</option>
+        <option>Vorkasse</option>
       </select>
+      <div class="form-group">
+        <label>IBAN</label>
+        <input type="text" v-model="payment.iban" placeholder="IBAN" />
+      </div>
     </div>
     <div class="col-12">
       <router-link to="/checkout/review" class="btn btn-primary float-right"
