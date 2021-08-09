@@ -14,9 +14,14 @@
       <select class="form-control">
         <option>Vorkasse</option>
       </select>
-      <div class="form-group">
+      <div class="form-group mt-2">
         <label>IBAN</label>
-        <input type="text" v-model="payment.iban" placeholder="IBAN" />
+        <input
+          type="text"
+          v-model="payment.iban"
+          class="form-control"
+          placeholder="IBAN"
+        />
       </div>
     </div>
     <div class="col-12">
@@ -31,7 +36,11 @@
 export default {
   name: "CheckoutPayment",
   data() {
-    return {};
+    return {
+      payment: {
+        iban: "",
+      },
+    };
   },
 };
 </script>

@@ -8,6 +8,7 @@ import CheckoutPayment from '@/views/Checkout/Payment.vue'
 import CheckoutShipping from '@/views/Checkout/Shipping.vue'
 import CheckoutReview from '@/views/Checkout/Review.vue'
 import UserLogin from '@/views/User/Login.vue'
+import UserDebug from '@/views/User/Debug.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/user/login',
     name: 'UserLogin',
     component: UserLogin
+  },
+  {
+    path: '/user/debug',
+    name: 'UserDebug',
+    component: UserDebug
   }
 ]
 
