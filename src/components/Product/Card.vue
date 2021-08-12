@@ -7,11 +7,17 @@
         alt="Card image cap"
       />
       <div class="card-body">
-        <h5 class="card-title">{{ item.name }}</h5>
+        <h5 class="card-title">
+          {{ item.name }}
+          <div class="price float-right">{{ formatedPrice }}</div>
+        </h5>
         <p class="card-text">
           {{ item.desc }}
         </p>
-        <router-link :to="'/product/' + item.sku" class="btn btn-primary"
+        <router-link
+          :to="'/product/' + item.sku"
+          v-if="this.button"
+          class="btn btn-primary"
           >Go somewhere</router-link
         >
       </div>
@@ -25,7 +31,22 @@ export default {
   data() {
     return {
       item: {},
+      stock: {},
     };
+  },
+  computed: {
+    formatedPrice: function () {
+      let value = this.stock.price;
+      if (typeof value !== "number") {
+        return value;
+      }
+      var formatter = new Intl.NumberFormat("de-DE", {
+        style: "currency",
+        currency: "EUR",
+        minimumFractionDigits: 2,
+      });
+      return formatter.format(value);
+    },
   },
   methods: {
     load: function () {
@@ -34,6 +55,19 @@ export default {
         .then((data) => {
           if (data.product) {
             this.item = data.product;
+            this.loadStock(data.product.stock_id);
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    },
+    loadStock: function (id) {
+      fetch("https://ms.movie.jetzt/stock/" + id)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.stock) {
+            this.stock = data.stock;
           }
         })
         .catch((error) => {
@@ -48,6 +82,11 @@ export default {
     identifier: {
       required: true,
       type: Number,
+    },
+    button: {
+      required: false,
+      type: Boolean,
+      default: true,
     },
   },
 };
