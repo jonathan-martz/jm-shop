@@ -13,62 +13,23 @@
       </div>
       <div class="col-12 col-md-4"></div>
       <div class="col-12 col-md-4 mt-2">
-        <div class="vc-cart">
-          <div class="list-group">
-            <a
-              href="#"
-              class="list-group-item list-group-item-action active"
-              aria-current="true"
-            >
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Product Name</h5>
-                <small>Sku: test-123</small>
-              </div>
-              <p class="mb-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                voluptua.
-              </p>
-              <small>Price: 9,99€ / Qty: 1</small>
-            </a>
-            <a
-              href="#"
-              class="list-group-item list-group-item-action"
-              aria-current="true"
-            >
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Product Name</h5>
-                <small>Sku: test-123</small>
-              </div>
-              <p class="mb-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                voluptua.
-              </p>
-              <small>Price: 9,99€ / Qty: 1</small>
-            </a>
-            <a
-              href="#"
-              class="list-group-item list-group-item-action"
-              aria-current="true"
-            >
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Product Name</h5>
-                <small>Sku: test-123</small>
-              </div>
-              <p class="mb-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                voluptua.
-              </p>
-              <small>Price: 9,99€ / Qty: 1</small>
-            </a>
+        <div class="vc-cart" v-for="(item, index) in cart" :key="index">
+          <product-card :identifier="item.product" :button="false"> </product-card>
+          <div class="d-block px-2 py-2">
+            <label>Menge:</label>
+            <input
+              type="number"
+              v-model="item.qty"
+              min="1"
+              @change="update(item.id, item.qty)"
+              class="form-control"
+            />
           </div>
         </div>
       </div>
       <div class="col-12 col-md-4"></div>
       <div class="col-12">
-        <router-link to="/checkout/shipping" class="btn btn-primary float-right"
+        <router-link to="/checkout/shipping" class="btn btn-primary float-right mt-2"
           >Next Step</router-link
         >
       </div>
@@ -77,14 +38,33 @@
 </template>
 
 <script>
+import ProductCard from "@/components/Product/Card.vue";
+
 export default {
   name: "CheckoutCart",
   data() {
     return {};
   },
+  components: {
+    "product-card": ProductCard,
+  },
+  mounted() {
+    this.$store.commit("cart-load", {
+      that: this,
+    });
+  },
   computed: {
-    items: function () {
+    cart: function () {
       return this.$store.state.cart.items;
+    },
+  },
+  methods: {
+    update: function (id, qty) {
+      this.$store.commit("cart-update-qty", {
+        that: this,
+        id: id,
+        qty: qty,
+      });
     },
   },
 };
